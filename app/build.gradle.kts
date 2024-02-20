@@ -55,26 +55,33 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
-    // Kotlin navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    //Navigation component
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     //loading button
-    implementation ("br.com.simpleness:loading-button-android:2.2.0")
+    implementation ("br.com.simplepass:loading-button-android:2.2.0")
 
     //Glide
-    implementation ("com.github.bump tech.glide:glide:4.15.1")
+    implementation ("com.github.bumptech.glide:glide:4.13.0")
 
     //circular image
-    implementation ("de.rhododendron:circumnavigate:3.1.0")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
-    //viewpager2 indicator
-    implementation ("io.github.veil.viewpager indicator:viewpager indicator:1.0.0-alpha.1")
+    //viewpager2 indicatior
+    implementation ("io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1")
 
     //stepView
-    implementation ("com.pushcart.step view:step view:1.5.1")
+    implementation ("com.shuhart.stepview:stepview:1.5.1")
 
     //Android Ktx
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.4.2")
 
+    //Coroutines with firebase
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
+    //Android Ktx
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    //Dimen
+    implementation ("com.intuit.ssp:ssp-android:1.0.5")
+    implementation ("com.intuit.sdp:sdp-android:1.0.5")
 }

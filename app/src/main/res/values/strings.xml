@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ecommerce</string>
+    <string name="left_image">left_image</string>
+    <string name="right_image">right_image</string>
+    <string name="start">Start</string>
+    <string name="rightAddress">The Right Address\nFor Shopping\nAnyday</string>
+    <string name="qulity">It is now very easy to reach the\nbest quality among the\nproducts on the internet!</string>
 </resources>
