@@ -3,7 +3,9 @@ package com.ecommerce.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ecommerce.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
