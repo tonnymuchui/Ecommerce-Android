@@ -11,10 +11,14 @@ import androidx.lifecycle.lifecycleScope
 import com.ecommerce.R
 import com.ecommerce.data.User
 import com.ecommerce.databinding.FragmentRegisterBinding
+import com.ecommerce.util.RegisterValidation
 import com.ecommerce.util.Resource
 import com.ecommerce.viewModel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 private val TAG = "RegisterFragment"
 
@@ -59,6 +63,18 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                         Log.e(TAG, resource.message ?: "Unknown error")
                     }
                     else -> Unit
+                }
+            }
+        }
+        lifecycleScope.launch {
+            viewModel.validation.collect {validation ->
+                if (validation.email is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.edEmailRegister.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
                 }
             }
         }
