@@ -24,6 +24,9 @@ class AccountOptions: Fragment(R.layout.fragment_account_options) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.buttonLoginAccountOptions.setOnClickListener {
+            navController.navigate(R.id.action_accountOptionsFragment_to_loginFragment)
+        }
         binding.buttonRegisterAccountOptions.setOnClickListener {
             navController.navigate(R.id.action_accountOptionsFragment_to_registerFragment)
         }
